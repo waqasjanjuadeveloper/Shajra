@@ -21,10 +21,3 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
-
-document.querySelector('.contact-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const status = event.currentTarget.querySelector('.form-status');
-  status.textContent = 'Thanks - your note is ready to send. We will be in touch soon.';
-  event.currentTarget.reset();
-});
